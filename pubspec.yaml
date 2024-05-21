@@ -1,0 +1,72 @@
+name: crossmaster
+description: "A new Flutter project."
+# La ligne suivante empêche le package d'être publié accidentellement sur pub.dev en utilisant `flutter pub publish`.
+# C'est préférable pour les packages privés.
+publish_to: 'none' # Retirez cette ligne si vous souhaitez publier sur pub.dev
+
+# Définit la version et le numéro de build de votre application.
+# Un numéro de version est composé de trois nombres séparés par des points, comme 1.2.43,
+# suivi d'un numéro de build facultatif séparé par un +.
+# Le numéro de version et le numéro de build peuvent être remplacés dans flutter
+# build en spécifiant --build-name et --build-number, respectivement.
+# Sous Android, build-name est utilisé comme versionName tandis que build-number est utilisé comme versionCode.
+# Pour en savoir plus sur la version Android, consultez https://developer.android.com/studio/publish/versioning
+# Sous iOS, build-name est utilisé comme CFBundleShortVersionString tandis que build-number est utilisé comme CFBundleVersion.
+# Pour en savoir plus sur la version iOS, consultez
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# Sous Windows, build-name est utilisé comme les parties majeure, mineure et de correctif
+# des versions du produit et du fichier, tandis que build-number est utilisé comme suffixe de build.
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.12.0 <3.0.0'
+
+# Les dépendances spécifient d'autres packages dont votre package a besoin pour fonctionner.
+# Pour mettre automatiquement à niveau les dépendances de votre package vers les dernières versions
+# considérez l'exécution de `flutter pub upgrade --major-versions`. Alternativement,
+# les dépendances peuvent être mises à jour manuellement en changeant les numéros de version ci-dessous pour
+# la dernière version disponible sur pub.dev. Pour voir quelles dépendances ont des versions plus récentes disponibles,
+# exécutez `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # La ligne suivante ajoute la police Cupertino Icons à votre application.
+  # Utilisez avec la classe CupertinoIcons pour les icônes de style iOS.
+  cupertino_icons: ^1.0.6
+
+  video_player: ^2.1.11 # Exemple de dépendance pour la lecture de vidéos
+  flutter_mjpeg: ^2.0.4 # Exemple de dépendance pour afficher des flux MJPEG
+  webview_flutter: ^2.0.14
+
+dev_dependencies:
+  flutter_launcher_icons: "^0.9.2"
+  flutter_test:
+    sdk: flutter
+
+  # Le package "flutter_lints" ci-dessous contient un ensemble de lints recommandés pour
+  # encourager les bonnes pratiques de codage. L'ensemble de lint fourni par le package est
+  # activé dans le fichier `analysis_options.yaml` situé à la racine de votre
+  # package. Voir ce fichier pour des informations sur la désactivation de lint spécifiques et l'activation d'autres.
+  flutter_lints: ^3.0.0
+
+# Pour plus d'informations sur la partie Dart générique de ce fichier, consultez la
+# page suivante: https://dart.dev/tools/pub/pubspec
+
+# La section suivante est spécifique aux packages Flutter.
+flutter:
+
+  # La ligne suivante garantit que la police Material Icons est
+  # incluse avec votre application, afin que vous puissiez utiliser les icônes dans
+  # la classe des icônes matériels.
+  uses-material-design: true
+  # Pour ajouter des actifs à votre application, ajoutez une section actifs, comme ceci:
+  assets:
+    - assets/icon.png
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icon.png"
+
+
